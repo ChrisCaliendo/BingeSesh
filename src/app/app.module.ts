@@ -3,12 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderModule } from './header/header.module';
+import { HomeComponent } from './home/home.component';
+import { BingeWatcherComponent } from './binge-watcher/binge-watcher.component';
+import { BingeMakerComponent } from './binge-maker/binge-maker.component';
+import { MovieBoardComponent } from './movie-board/movie-board.component';
+import { MovieInfoComponent } from './movie-info/movie-info.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    BingeWatcherComponent,
+    BingeMakerComponent,
+    MovieBoardComponent,
+    MovieInfoComponent
   ],
   imports: [
+    HeaderModule,
     BrowserModule,
     AppRoutingModule
   ],
