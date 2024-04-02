@@ -3,6 +3,5 @@ export interface Show {
     title?: string;
     description?: string;
     timespan?: string;
-    poster_path?: string;
-
+    imageUrl?: string;
 }
