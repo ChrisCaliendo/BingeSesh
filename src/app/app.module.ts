@@ -9,6 +9,8 @@ import { BingeWatcherComponent } from './pages/binge-watcher/binge-watcher.compo
 import { BingeMakerComponent } from './pages/binge-maker/binge-maker.component';
 import { MovieBoardComponent } from './components/movie-board/movie-board.component';
 import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
+import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,15 @@ import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
     BingeWatcherComponent,
     BingeMakerComponent,
     MovieBoardComponent,
-    MovieInfoComponent
+    MovieInfoComponent,
+    
   ],
   imports: [
     HeaderModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
