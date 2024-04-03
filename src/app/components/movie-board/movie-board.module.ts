@@ -7,16 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MovieBoardComponent,
+  ],
   imports: [
     CommonModule,
-    MovieBoardComponent,
-    BrowserAnimationsModule,
-    MatIconModule
   ],
   exports: [
     MovieBoardComponent,
-    
   ]
 
 })

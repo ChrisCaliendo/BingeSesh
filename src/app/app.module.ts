@@ -11,20 +11,20 @@ import { MovieBoardComponent } from './components/movie-board/movie-board.compon
 import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeModule } from './pages/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     BingeWatcherComponent,
     BingeMakerComponent,
-    MovieBoardComponent,
     MovieInfoComponent,
     
   ],
   imports: [
     HeaderModule,
     BrowserModule,
+    HomeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule
