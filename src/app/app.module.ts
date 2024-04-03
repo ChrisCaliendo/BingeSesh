@@ -12,14 +12,14 @@ import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './pages/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BingeWatcherComponent,
     BingeMakerComponent,
-    MovieInfoComponent,
-    
+    MovieInfoComponent
   ],
   imports: [
     HeaderModule,
@@ -27,7 +27,8 @@ import { HomeModule } from './pages/home/home.module';
     HomeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
