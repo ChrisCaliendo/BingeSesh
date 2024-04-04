@@ -6,7 +6,7 @@ import { BingeWatcherComponent } from './pages/binge-watcher/binge-watcher.compo
 import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
 
 const routes: Routes = [
-  {component: HomeComponent, path: ''},
+  {component: HomeComponent, path: '', pathMatch: 'full' },
   {component: BingeMakerComponent, path: 'bingeMaker'},
   {component: BingeWatcherComponent, path: 'bingeWatcher'},
   {component: MovieInfoComponent, path: 'movieInfo/:id'},

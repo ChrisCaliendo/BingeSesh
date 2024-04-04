@@ -15,7 +15,7 @@
                         </div>
                         
                         <div class="flex-col w-full bg-secondary text-text bottom-0 rounded-b-lg justify-end">
-                            <button class="bg-accent text-black font-bold xs:text-sm rounded-lg py-1 px-2 mt-2 ml-2 content-end hover:bg-yellow-700">Info</button>
+                            <button [routerLink]="['/movieInfo', movie.id]" class="bg-accent text-black font-bold xs:text-sm rounded-lg py-1 px-2 mt-2 ml-2 content-end hover:bg-yellow-700">Info</button>
                             <button class="bg-accent text-black font-bold xs:text-sm rounded-lg py-1 px-2 my-2 mx-2 content-end hover:bg-yellow-700">Add To Binge <span class="font-extrabold">+</span></button>
                         </div>
                         

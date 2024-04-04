@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MovieBoardComponent } from './movie-board.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     MovieBoardComponent,

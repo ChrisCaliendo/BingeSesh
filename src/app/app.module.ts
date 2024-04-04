@@ -13,18 +13,20 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { MovieInfoModule } from './pages/movie-info/movie-info.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     BingeWatcherComponent,
     BingeMakerComponent,
-    MovieInfoComponent
   ],
   imports: [
     HeaderModule,
     BrowserModule,
     HomeModule,
+    MovieInfoModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
