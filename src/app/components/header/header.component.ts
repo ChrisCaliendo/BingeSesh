@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  showSignUp: boolean = false;
+  showLogin: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  toggleSignUp() {
+    this.showSignUp = !this.showSignUp;
+    
+  }
+
+  toggleLogin() {
+    this.showLogin = !this.showLogin;
+  }
+
+
+
 
 }

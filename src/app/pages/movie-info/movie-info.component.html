@@ -4,13 +4,13 @@
     <div *ngIf="show !== null; else noShow" class="grid justify-items-stretch m-10">
         <p class="bg-secondary bg-blend-normal bg-opacity-25 text-center justify-self-center text-4xl text-accent px-5 py-2 rounded-lg">{{show.title}} </p>
         <div class="flex justify-between">
-            <img class="w-1/5 rounded-md m-7" src="https://image.tmdb.org/t/p/w500{{show.imageUrl}}" alt="">
+            <img class="border object-scale-down border-secondary w-1/5 rounded-md m-7" src="https://image.tmdb.org/t/p/w500{{show.imageUrl}}" alt="">
             <div class="bg-secondary rounded-md bg-blend-normal m-7 bg-opacity-25 text-center text-4xl text-accent ">
-                <p class="text-3xl text-text-100 p-4 text-text ">{{show.description}}</p>
-                <div class="flex justify-around">
-                    <p class="text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Rating: {{show.rating}}</p>
-                    <p class="text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Released: {{show.releaseDate}}</p>
-                    <p class="text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Runtime: {{show.timespan}} min</p>
+                <p class="text-sm md:text-3xl text-text-100 p-4 text-text ">{{show.description}}</p>
+                <div class="flex justify-around ">
+                    <p class="text-xs md:text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Rating: {{show.rating}}</p>
+                    <p class="text-xs md:text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Released: {{show.releaseDate}}</p>
+                    <p class="text-xs md:text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25">Runtime: {{(show.timespan == null ? 0 : show.timespan)}} min</p>
 
                 </div>
             </div>
@@ -28,5 +28,5 @@
 </div>
 
 <ng-template #loadingScreen>
-    <p class="text-4xl text-text ">Loading...</p>
+    <p class="bg-secondary bg-blend-normal bg-opacity-25 text-center justify-self-center text-4xl text-text px-5 py-2 rounded-lg sm:m-52 m-5">loading...</p>
 </ng-template>

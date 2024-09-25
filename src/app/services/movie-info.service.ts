@@ -25,7 +25,7 @@ export class MovieInfoService {
           releaseDate: show.releaseDate,
           adult: show.adult,
           status: show.status,
-          rating: show.voteAverage
+          rating: (show.voteAverage !== null) ? Math.round(show.voteAverage *10)/10 : null
         };
       })
     );

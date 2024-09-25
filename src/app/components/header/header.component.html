@@ -1,16 +1,43 @@
-<div class="flex text-center bg-secondary text-3xl font-bold pl-4 py-3 justify-between bg-opacity-25">
+<div [ngClass]="{'start-trigger': toggleLogin || toggleSignUp}"  class="peer fixed z-20 flex text-center bg-header text-3xl font-bold pl-4 py-3 justify-between w-screen">
     <div class="flex mx-4">
       <p [routerLink]="['']" routerLinkActive="router-link-active"  class="text-accent cursor-pointer">Binge Sesh</p>
       <input type="text" placeholder="Search" class="focus:ring-accent  text-text-100 text-xl focus:caret-accent bg-background border border-secondary rounded-lg mx-4  px-2 text-text placeholder:text-secondary">
     </div>
     
-    <div>
-      <button class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 text-background hover:bg-blend-multiply">
+    <div class="mr-4">
+      <button (click)="toggleLogin()" class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 text-background hover:bg-accent">
         Login 
       </button>
-      <button class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 mr-4 text-background">
+      <button (click)="toggleSignUp()" class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 mr-4 text-background hover:bg-accent">
         Sign Up 
       </button>
     </div>
     
+    
   </div>
+  <div *ngIf="showLogin"  class="transition ease-in duration-500 opacity-0 peer-[.start-trigger]:opacity-100  max-w-96 h-64 bg-secondary rounded-lg bg-opacity-100 z-40 fixed align-middle text-3xl font-bold pl-4 py-3 justify-self-center top-20 left-1/2 transform-translate-x-1/2  "> 
+    <div class="flex justify-between">
+      <p>Login</p>
+      <button (click)="toggleLogin()"  class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 my-2 ml-4 text-background hover:bg-accent">X</button>
+    </div>
+    <div class="flex flex-col mt-3">
+      <input type="text" placeholder="Username" class="focus:ring-accent  text-text-100 text-xl focus:caret-accent bg-background border border-secondary rounded-lg mx-4  px-2 text-text placeholder:text-secondary">
+      <input type="text" placeholder="Password" class="focus:ring-accent  text-text-100 text-xl focus:caret-accent bg-background border border-secondary rounded-lg mx-4  px-2 text-text placeholder:text-secondary">
+    </div>
+    <input type="button" value="Login" class="text-text-100 text-base bg-primary rounded-lg mx-2 py-1 px-2 my-2 ml-4 text-background hover:bg-accent">
+  </div>
+
+  <div *ngIf="showSignUp" class="max-w-96 h-64 bg-secondary rounded-lg bg-opacity-100 z-40 fixed align-middle text-3xl font-bold pl-4 py-3 justify-self-center top-20 left-1/2 transform -translate-x-1/2"> 
+    <div class="flex justify-between">
+      <p>Sign Up</p>
+      <button (click)="toggleSignUp()" class="text-text-100 text-xl bg-secondary rounded-lg mx-2 py-1 px-2 my-2 ml-4 text-background hover:bg-accent">X</button>
+    </div>
+    
+    <div class="flex flex-col mt-3">
+      <input type="text" placeholder="Username" class="focus:ring-accent  text-text-100 text-xl focus:caret-accent bg-background border border-secondary rounded-lg mx-4  px-2 text-text placeholder:text-secondary">
+      <input type="text" placeholder="Password" class="focus:ring-accent  text-text-100 text-xl focus:caret-accent bg-background border border-secondary rounded-lg mx-4  px-2 text-text placeholder:text-secondary">
+    </div>
+    <input type="button" value="Create Account" class="text-text-100 text-base bg-primary rounded-lg mx-2 py-1 px-2 my-2 ml-4 text-background hover:bg-accent">
+  </div>
+
+  <div *ngIf="showSignUp || showLogin" class=" w-screen h-full bg-slate-900 opacity-45 bg-opacity-100 z-30 fixed align-middle text-3xl font-bold pl-4 "></div>
