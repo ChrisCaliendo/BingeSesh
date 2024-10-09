@@ -35,13 +35,6 @@
             class="text-xs md:text-xl text-text-100 p-4 text-primary bg-secondary bg-blend-normal bg-opacity-25"
           >
             Runtime:
-            {{
-              show.timespan == null
-                ? 0
-                : (show.timespan >= 60
-                    ? show.timespan + " hr " + (show.timespan % 60)
-                    : show.timespan) + " min"
-            }}
           </p>
         </div>
       </div>

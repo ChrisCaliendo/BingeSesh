@@ -9,19 +9,16 @@ import { BingeWatcherComponent } from './pages/binge-watcher/binge-watcher.compo
 import { BingeMakerComponent } from './pages/binge-maker/binge-maker.component';
 import { MovieBoardComponent } from './components/movie-board/movie-board.component';
 import { MovieInfoComponent } from './pages/movie-info/movie-info.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MovieInfoModule } from './pages/movie-info/movie-info.module';
+import { TimeDisplayComponent } from './time-display/time-display.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BingeWatcherComponent,
-    BingeMakerComponent,
-  ],
+  declarations: [AppComponent, BingeWatcherComponent, BingeMakerComponent, TimeDisplayComponent],
   imports: [
     HeaderModule,
     BrowserModule,
@@ -30,9 +27,9 @@ import { MovieInfoModule } from './pages/movie-info/movie-info.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
