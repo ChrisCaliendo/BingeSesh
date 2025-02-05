@@ -15,10 +15,9 @@ import { HomeModule } from './pages/home/home.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MovieInfoModule } from './pages/movie-info/movie-info.module';
-import { TimeDisplayComponent } from './time-display/time-display.component';
 
 @NgModule({
-  declarations: [AppComponent, BingeWatcherComponent, BingeMakerComponent, TimeDisplayComponent],
+  declarations: [AppComponent, BingeWatcherComponent, BingeMakerComponent],
   imports: [
     HeaderModule,
     BrowserModule,
